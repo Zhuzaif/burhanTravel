@@ -27,7 +27,7 @@ const packages = [
   },
 ];
 
-function PackageCard({ pkg, index, key }: { pkg: typeof packages[0]; index: number; key?: React.Key }) {
+function PackageCard({ pkg, index }: { pkg: typeof packages[0]; index: number }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
