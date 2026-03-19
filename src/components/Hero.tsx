@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Globe } from "./Globe";
+import { ErrorBoundary } from "./ErrorBoundary";
 import { ArrowRight, MapPin } from "lucide-react";
 
 export function Hero() {
@@ -72,7 +73,9 @@ export function Hero() {
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
-            <Globe className="relative z-10 drop-shadow-2xl" />
+            <ErrorBoundary>
+              <Globe className="relative z-10 drop-shadow-2xl" />
+            </ErrorBoundary>
             
             {/* Floating Elements */}
             <motion.div
